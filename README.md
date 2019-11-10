@@ -1,6 +1,6 @@
 # Fallout theme
 
-## Author: Turboblack
+## Author: Turboblack 2019 www.t0rba.tk
 
 ## Preview
 ![Theme preview](/preview.jpg)
