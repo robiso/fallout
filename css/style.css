@@ -1,0 +1,239 @@
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
+html {
+	min-height: 100%;
+	position: relative;
+	box-shadow: 0 0 100px rgba(0, 0, 0, 0.27) inset;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #000000;
+  background-image: radial-gradient(#11581E, #041607);
+  font-family: 'Inconsolata', Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: rgba(128, 255, 128, 0.8);
+  text-shadow:
+      0 0 1px rgba(51, 255, 51, 1),
+      0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.overlay {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:
+      repeating-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.07) 50%,
+      rgba(0, 0, 0, 0) 100%);
+  background-size: auto 4px;
+  z-index: 99;
+}
+
+.overlay::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      0deg,
+      transparent 0%,
+      rgba(32, 128, 32, 0.2) 2%,
+      rgba(32, 128, 32, 0.8) 3%,
+      rgba(32, 128, 32, 0.2) 3%,
+      transparent 100%);
+  background-repeat: no-repeat;
+  animation: scan 7.5s linear 0s infinite;
+}
+
+@keyframes scan {
+  0%        { background-position: 0 -100vh; }
+  35%, 100% { background-position: 0 100vh; }
+}
+
+.terminal {
+  box-sizing: inherit;
+  position: absolute;
+  height: 100%;
+  width: 1000px;
+  max-width: 100%;
+  padding: 4rem;
+  text-transform: uppercase;
+}
+
+.output {
+  color: rgba(128, 255, 128, 0.8);
+  text-shadow:
+      0 0 1px rgba(51, 255, 51, 0.4),
+      0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.output::before {
+  content: "> ";
+}
+
+
+.input {
+  color: rgba(192, 255, 192, 0.8);
+  text-shadow:
+      0 0 1px rgba(51, 255, 51, 0.4),
+      0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.input::before {
+  content: "$ ";
+}
+
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.errorcode {
+  color: white;
+}
+
+#logo {
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	border-radius: 73px;
+	font-size: 25px;
+	color: #fff;
+	line-height: 73px;
+	vertical-align: middle;
+	text-align: center;
+	background: url("icons-graphic-design.png");
+	margin: 0 0 0 20px;
+	font-weight: bold;
+	padding: 0;
+}
+
+a, a:hover {
+	text-decoration: none;
+	border-bottom: 0px dotted #fff;
+	color: #fff;
+}
+
+
+.whiteFont {color: #fff;}
+.grayFont {color: #fff;}
+.padding20 {padding: 20px;}
+.padding40 {padding: 40px;}
+
+.blueBackground {background: rgba(178,178,178,0.2); color: #fff;}
+
+.navbar-default .navbar-toggle {border-color: #fff;}
+
+.navbar li {
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.navbar, .navbar-collapse {
+	border: 0;
+	background: none;
+}
+
+
+ul.nav.navbar-nav.navbar-right li a:hover, ul.nav.navbar-nav.navbar-right li.active a {
+	color: #fff;
+	background: none;
+	border-bottom: 1px solid #fff;
+}
+
+.b-top {
+    z-index: 2600;
+    position: fixed;
+    left: 0;
+    bottom: 90px;
+    width: 60%;
+    margin-left: 30%;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+.b-top:hover {
+    opacity:1;
+    filter:alpha(opacity=100);
+    cursor:pointer;
+}
+.b-top-but {
+    z-index: 2600;
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    margin: 0 0 0 100%;
+    padding: 32px 12px 4px;
+    color: #fff;
+    background: #d8d5c2 url(up.png) no-repeat 50% 11px;
+    border-radius: 7px;
+    width: auto;
+}
+
+
+.fa {
+  padding: 7px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 0px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-vk {
+  background: #125688;
+  color: white;
+}
+
+
+
+footer {
+	bottom: 0;
+	width: 100%;
+	font-size: 13px;
+	position: absolute;
+}
