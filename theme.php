@@ -24,8 +24,8 @@
 	<body>
 	    <div class="overlay"></div>
 
-        <?= $Wcms->alerts() ?>
-        <?= $Wcms->settings() ?>
+	    <?= $Wcms->settings() ?>
+	    <?= $Wcms->alerts() ?>
 
 	    <div class="container">
     		<nav class="navbar navbar-default">
